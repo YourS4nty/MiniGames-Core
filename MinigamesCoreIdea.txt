@@ -1,0 +1,115 @@
+nuevo proyecto: MinigamesCore By @YourS4nty
+informacion de desarrollo:
+- plugin de minecraft usando spigot api
+- compatibilidad 1.20.*++ 
+- construido en Native Java and Maven 
+- GroupId del proyecto dev.yours4nty
+Descripcion general:
+- plugin de manejo de minijuegos para servidores de minecraft
+- el plugin constara de sus clases principales globales y subclases que se encargaran de las demas instancias(minijuegos)
+Estructura pensada:
+por ahora el proyecto separaria managers listener y demas funciones logicas en sus respectivas carpetas segun su funcionalidad, tambien se menciona que los minijuegos iran estructurados dentro de la carpeta minigames la cual se encargara de separar las logicas/listeners/runner/managers etc. la estructura aun no esta completamente definida pero esta en proceso de creacion
+Descripcion de la funcionalidad:
+el plugin tendra un comando global el cual se encargara de crear arenas y almacenarlas en un archivo local(esto se definira en el config.yml, si sera en formato yaml, sqlite o mysql), las arenas guardaran las posiciones respectivas al area de juego por ejemplo guardaran la zona cubica donde se generara el lobby para dicha arena, tambien guardara la zona de juego y el spawn de la zona de juego, ademas de que se almacenara el tipo de arena, esto con el fin de poder ordenar las logicas de los minijuegos en la respectiva carpeta de minigames por ejemplo haciendo uso de clases Ej: dev.yours4nty.minigames.tntrun.listeners, ...runnables, ...managers, etc. y tambien algo importante es el mundo en el que estara la arean ya que muchos desarrolladores usan mundos custom para los minijuegos. las logicas de los minijuegos se basaran en estados de juego y en gametypes para separar las logicas, estos 2 ultimos mencionados seran manejados desde archivos java tipo enum para facilitar su acceso. tambien se implementara un sistema de bossbar globalizado para que pueda ser instanciado desde los respectivos minijuegos, por ejemplo se crea el handler global para manejo de bossbar, y al entrar a una lobby los usuarios veran una bossbar que indique la espera de jugadores, tambien veran una de un countdown antes del inicio de partida y asi con diferentes estados de juego. tambien se implementara el uso de sonidos, particulas, titles, y demas decoraciones tanto de chat como de interfaz, esto con el fin de que el funcionamiento sea mas dinamico e interactivo con el usuario y sea mas estetico a la vista, tambien se contara con un sistema de traduccion basado en un "messages.yml" el cual manejara el sistema de traducciones, el sistema base sera programado en ingles principalmente para mayor globalizacion sin embargo el sistema de mensajes.yml contendra los mensajes en español ingles portugues y varios idiomas de preferencia al usuario. tambien calarar que el metodo en el que funcionaran los juegos sera mediate un sistema de join/leave el cual funcinoara por comandos, cuando un usuario registre el join a una area de le redirigira al lobby de la misma, de ahi se generara un bossbar con la espera minima(2 jugadores), una vez se encuentren los 2 jugadores en cola se iniciara un countdown de 10s dentro de la bossbar para indicar el inicio de partida, una vez concluidos los 10 segundos se redirigiran a los jugadores en cola al spawn de la arena ya definido, luego de eso se esperaran 2 segundos(sin notificar al usuario), y se dara comienzo a la ronda, y ya de ahi en la bossbar estaria el progreso de partida, funcioanria toda la logica del juego y se empezaria el analisis de partida, al ser eliminado un usuario de la partida en curso se le redirigira al lobby ya que esa misma zona contara como zona de especteo y cola, al finalizar la ronda se le anunciara a todos los que estuvieron en la partida el ganador y al ganador se le mostrara un title con sonidos y particulas para una visualizacion estetica, esa seria la descripcion de la funcionalidad tanto del plugin en general como de los minigames individualmente. tambien se tiene pensado un sistema de configuracion extenso usando el config.yml desde el cual se busca dar la mayor perzonalizacion a los desarrolladores que vallan a implementar mi sistema, ademas de ofrecer comandos de ayuda y explicativos sobre el sistema, tambien un sistema de load y reload para poder editar las arenas en tiempo real y un sosporte de tabcompleter para que todo sea mas dinamico con el administrador.
+Minijuegos pensados hasta el momento:
+- #1 TNT_RUN 
+el primer y mas basico de los minijuegos seria un sistema clasico de tntrun el cual manejaria sus estados con la clase definida type:TNT_RUN, se manejaran estados de juego, bossbars, titles, sonidos y particulas para indicar los estados de juego, y para este en especifico se tiene pensado que los bloques que se usaran para la logica se puedan definir desde el config.yml 
+- #2 TNT_TAG
+el clasico juego de tnt tag, se hara un lobby del cual se redirigiran las perzonas al spawn del gamearea se dara aleatoriamente a un jugador el tag y empezara una cuenta inicial de 10s para poder pasar el tag antes de ser eliminado, al ser eliminado iria al lobby a espectar la parrtida mientras esta se encuentra en curso, y en caso de que la logre pasar, se usara una funcion aleatoria para definir un tiempo entre 3-8 segundos para que la perzona con el tag lo pueda pasar a siguiente, estos tiempos se podran modificar desde el config.yml
+- #3 FLOOR_SHUFFLE
+este es el juego de suelo de colores en el cual se selecciona un color aleatorio y los demas desaparecen, el sistema ira subiendo de dificultad entre mas rondas pasen hasta terminar con un ganador.  para este tambien los bloques a usar se definiran desde el config.yml
+- #4 FIND_ME
+es una replica del juego "adivina quien" pero usando bloques de mineraft, se definiran cuadriculas para cada jugador, bloques aleatorios que se podran cubrir con trapdoors hasta que uno de los 2 adivine el bloque del contrincante, para este se tiene pensado poder hacer un sistema con varias salas ya que al ser un juego 1v1 las salas se llenarian muy rapido, para este tambien los bloques a usar se definiran desde el config.yml
+- #5 PAINT_BALL
+un simple sistema de paintball ffa el cual usara blazerods para simular las armas, dispararan bolas de nieve y se necesitaran 2 hits para eliminar a un contrincante y pues la logica general
+Detalles adicionales:
+las logicas aun no estan bien definidas ni pulidas razon por la cual pueden surgir dudas con respecto a jugabilidad/compatibilidad pero eso se ira resolviendo junto con los bugs que vallan dando paso al camino del desarrollo. se busca cubrir la mayor cantidad de bugs y fallas posibles en el desarrollo para tener un sistema limpio y 100% funcional. se evitara el uso de static para logicas internas y listeners ya que todo se debera instanciar desde la gamearena.java. tambien se manejara un sistema de permisos desde el cual se necesitara op para crear arenas y logicas en general pero por ejemplo comandos como el join/leave seran abiertos al publico. tambien se tiene pensado un sistema de excepcinoes perzonalizadas y bueno el comando reload para poder hacer cambios rin reiniciar el server. y algo que si o si debe estar es una gui, por ejemplo los admins tendran guis para la creacion y administracion de las arenas y los jugadores para ver los diferentes minigames y poder unirse a ellos.
+Estructura de carpetas/Files
+
+MinigamesCore/
+├── pom.xml
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── dev/
+│       │       └── yours4nty/
+│       │           ├── MinigamesCore.java  <-- Clase principal
+│       │           ├── api/                <-- Interfaces públicas para minijuegos
+│       │           │   ├── Game.java
+│       │           │   ├── GameState.java
+│       │           │   ├── GameType.java
+│       │           │   ├── Arena.java
+│       │           │   └── Minigame.java
+│       │           ├── commands/
+│       │           │   ├── MinigameCommand.java
+│       │           │   ├── MinigameTabCompleter.java
+│       │           │   └── subcommands/
+│       │           │       ├── CreateCommand.java
+│       │           │       ├── JoinCommand.java
+│       │           │       ├── LeaveCommand.java
+│       │           │       ├── TeleportCommand.java
+│       │           │       ├── ReloadCommand.java
+│       │           │       └── ...
+│       │           ├── config/
+│       │           │   ├── ConfigManager.java
+│       │           │   ├── MessageManager.java
+│       │           │   └── Settings.java
+│       │           ├── gui/
+│       │           │   ├── ArenaAdminGUI.java
+│       │           │   ├── JoinMinigameGUI.java
+│       │           │   └── GUIUtils.java
+│       │           ├── listeners/
+│       │           │   ├── PlayerJoinListener.java
+│       │           │   ├── PlayerQuitListener.java
+│       │           │   └── GlobalListener.java
+│       │           ├── managers/
+│       │           │   ├── GameManager.java         <-- Gestiona arenas y juegos
+│       │           │   ├── ArenaStorage.java        <-- Carga y guarda arenas
+│       │           │   ├── BossBarManager.java
+│       │           │   ├── ParticleManager.java
+│       │           │   ├── SoundManager.java
+│       │           │   └── TitleManager.java
+│       │           ├── models/
+│       │           │   ├── GameArena.java
+│       │           │   ├── Zone.java
+│       │           │   └── PlayerData.java
+│       │           ├── storage/
+│       │           │   ├── yaml/
+│       │           │   │   ├── YamlArenaStorage.java
+│       │           │   ├── sql/
+│       │           │   │   ├── SqliteArenaStorage.java
+│       │           │   │   └── MysqlArenaStorage.java
+│       │           ├── utils/
+│       │           │   ├── LocationUtils.java
+│       │           │   ├── ChatUtils.java
+│       │           │   ├── StringUtils.java
+│       │           │   └── ExceptionUtils.java
+│       │           └── minigames/
+│       │               ├── tntrun/
+│       │               │   ├── TntRunGame.java
+│       │               │   ├── listeners/
+│       │               │   │   └── TntRunListener.java
+│       │               │   ├── managers/
+│       │               │   │   └── TntRunGameManager.java
+│       │               │   └── runnables/
+│       │               │       └── TntRunRunnable.java
+│       │               ├── floorshuffle/
+│       │               │   ├── FloorShuffleGame.java
+│       │               │   ├── listeners/
+│       │               │   └── runnables/
+│       │               ├── tnttag/
+│       │               │   └── ...
+│       │               ├── findme/
+│       │               │   └── ...
+│       │               └── paintball/
+│       │                   └── ...
+│       └── resources/
+│           ├── plugin.yml
+│           ├── config.yml
+│           ├── messages.yml
+│           ├── arenas/
+│           │   └── example_arena.yml
+│           └── lang/
+│               ├── en_US.yml
+│               ├── es_ES.yml
+│               └── pt_PT.yml

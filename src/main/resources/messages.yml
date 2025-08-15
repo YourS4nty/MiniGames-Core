@@ -1,0 +1,498 @@
+es:
+  ingameonly: "§4Este comando solo puede usarse en el juego."
+
+  help:
+    - "§6MinigamesCore - Comandos disponibles:"
+    - "§e/mg create <nombre> <tipo> <icono> <nombre visible> §7- Crea una nueva arena"
+    - "§e/mg setlobby <nombre> §7- Establece el lobby de la arena"
+    - "§e/mg setspawn <nombre> §7- Establece el punto de aparición de la arena"
+    - "§e/mg setplayzone <nombre> §7- Define la zona jugable"
+    - "§e/mg delete <nombre> §7- Elimina una arena"
+    - "§e/mg list §7- Lista todas las arenas"
+    - "§e/mg join <arena> §7- Únete a una arena"
+    - "§e/mg leave §7- Sal de la arena actual"
+    - "§e/mg reload §7- Recarga las arenas y la configuración"
+
+  mgcreate: "§cUso: /mg create <nombre> <tipo> <icono> <nombre visible>"
+  mginvalidicon: "§cIcono de ítem inválido: {icon}"
+  mgcreated: "§aArena creada: {name}"
+  mgcreatexists: "§cYa existe una arena con ese nombre."
+
+  mgspawn: "§cUso: /mg setspawn <arena>"
+  mgspawnset: "§aSpawn establecido correctamente."
+
+  mglobby: "§cUso: /mg setlobby <arena>"
+  mglobbyset: "§aLobby establecido correctamente."
+
+  mgplayzone: "§cUso: /mg setplayzone <arena>"
+  mgselectpositions: "§cSelecciona ambas posiciones con la Blaze Rod primero."
+  mgplayzoneset: "§aZona de juego establecida correctamente."
+
+  mgdelete: "§cUso: /mg delete <nombre>"
+  mgdeleted: "§aArena eliminada: {name}"
+
+  mglistempty: "§cNo hay arenas registradas."
+  mglistheader: "§6Arenas registradas:"
+  mglistitem: "§e- {name} §7({type})"
+
+  gui.title: "§eSelecciona una Arena"
+
+  join-gui-title: "§bUnirse a una Arena"
+  join-gui-item-name: "§a{display} §7({name})"
+  leave-item-name: "§cSalir de la Arena"
+
+  alreadyin: "§cYa estás en una arena."
+  leaveitemname: "§cSalir de la Arena"
+  leftarena: "§aHas salido de la arena."
+  notinarena: "§cNo estás en ninguna arena."
+
+  mgarenanotfound: "§c¡La arena no fue encontrada!"
+  mgjoined: "§a¡Te has unido a la arena §e{name}§a!"
+
+  mgleft: "§aSaliste de la arena."
+
+  mgreloaded: "§aMinigamesCore recargado correctamente."
+
+  pos1: "§aPosición 1 seleccionada en: §7{location}"
+  pos2: "§aPosición 2 seleccionada en: §7{location}"
+
+  arena.disconnect: "§cHas sido eliminado de la arena porque te desconectaste."
+  force-reload: "§cHas sido expulsado por un reinicio forzado."
+  forcedr: "§aTodas las arenas y jugadores fueron reiniciados correctamente."
+
+  tntrun.gamewinstate: "§4Partida Terminada!"
+  tntrun.waiting: "§eEsperando jugadores... (§f{count}§e/2)"
+  tntrun.countdown: "§eIniciando en §f{count} §esegundos..."
+  tntrun.running: "§a¡Corre! El suelo desaparece"
+  tntrun.pw.getSC: "§a¡Has recogido una segunda oportunidad!"
+  tntrun.pw.hasSC: "§cYa tienes una segunda oportunidad almacenada."
+  tntrun.pw.usedSC: "§a¡Usaste tu segunda oportunidad!"
+
+  tnttag.gamewinstate: "§4Partida Terminada! §fGanador:§e{player}"
+  tnttag.waiting: "§eEsperando jugadores... (§f{count}§e/2)"
+  tnttag.countdown: "§eIniciando en §c{count}s"
+  tnttag.running: "§cTNT Tag en progreso! §7Jugadores: {count}"
+  tnttag.it: "§c{time}s para pasar la TNT!"
+  tnttag.started: "§eCuidado! §c{it} §aTiene La Bomba!"
+
+  sumo.waiting: "§eEsperando jugadores... (§a{count}§e/2)"
+  sumo.countdown: "§aComenzando en {count} segundos!"
+  sumo.running: "§a¡Empuja a tus oponentes!"
+  sumo.eliminated: "§c{player} fue eliminado!"
+  sumo.gamewinstate: "§6{player} ha ganado el Sumo!"
+
+  spleef.waiting: "§bSpleef §7| Esperando jugadores... §f(§e{count}§f)"
+  spleef.countdown: "§bSpleef §7| §aIniciando en §e{count} §asegundos..."
+  spleef.running: "§bSpleef §7| §aJugadores en partida: §e{count}"
+  spleef.gamewinstate: "§bSpleef §7| §aGanador: §e%player%"
+  spleef.eliminated: "§cHas sido eliminado de Spleef"
+  spleef.joined: "§aTe has unido a la arena de Spleef"
+  spleef.left: "§eHas salido de la arena de Spleef"
+
+  paintball.waiting: "§eEsperando jugadores... ({count}/2)"
+  paintball.countdown: "§aLa partida inicia en §f{count} §asegundos..."
+  paintball.running: "§aPaintball en progreso. Jugadores vivos: {count}"
+  paintball.win: "§a¡{player} ha ganado el Paintball!"
+
+  oitc.waiting: "§eOITC §7| Esperando jugadores... §f(§e{count}§f/2)"
+  oitc.countdown: "§eOITC §7| §aIniciando en §e{count} §asegundos..."
+  oitc.instructions: "§eOITC §7| §fUsa tu arco (1 flecha) para matar de 1 disparo. §eCada kill te da una flecha extra. §c¡Pierdes al quedarte sin vidas!"
+  oitc.running: "§eOITC §7| §aJugadores en partida: §e{count}"
+  oitc.kill: "§e{killer} §7mató a §c{victim} §7(§e{victim_lives} vidas restantes§7)"
+  oitc.eliminated: "§cHas sido eliminado de OITC"
+  oitc.eliminated-broadcast: "§e{player} §cfue eliminado de la partida"
+  oitc.gamewinstate: "§eOITC §7| §aGanador: §e{player}"
+  oitc.joined: "§aTe has unido a la arena OITC"
+  oitc.left: "§eHas salido de la arena OITC"
+
+  buildbattle:
+    cannot-join: "§cNo puedes unirte a esta arena ahora mismo."
+    waiting: "§aEsperando jugadores... §e{count} §ajugadores"
+    countdown: "§eLa partida inicia en §c{time} §esegundos"
+    building-time: "§aTiempo restante de construcción: §e{time}s"
+    theme-selected: "§a¡El tema es: §e{theme}!"
+    theme-bar: "§eTema: §b{theme}"
+    voting-next: "§bPasando al siguiente jugador para votar..."
+    vote-cast: "§aHas votado con §e{score} §apuntos."
+    vote-already-cast: "§cYa votaste esta construcción."
+    vote-own-build: "§cNo puedes votar tu propia construcción."
+    start-voting: "§e¡Tiempo terminado! Comenzando las votaciones..."
+    winner-announce: "§6El ganador es §e{player} §6con §b{score} §6puntos!"
+    game-ended: "§a¡La partida ha terminado!"
+    ending: "§aReiniciando arena en §e{time}s"
+
+# English
+
+en:
+  ingameonly: "§4This command can only be used in-game."
+
+  help:
+    - "§6MinigamesCore - Available Commands:"
+    - "§e/mg create <name> <type> <icon> <display name> §7- Create a new arena"
+    - "§e/mg setlobby <name> §7- Set the arena lobby"
+    - "§e/mg setspawn <name> §7- Set the arena spawn point"
+    - "§e/mg setplayzone <name> §7- Define the playable area"
+    - "§e/mg delete <name> §7- Delete an arena"
+    - "§e/mg list §7- List all arenas"
+    - "§e/mg join <arena> §7- Join an arena"
+    - "§e/mg leave §7- Leave the current arena"
+    - "§e/mg reload §7- Reload arenas and configuration"
+
+  mgcreate: "§cUsage: /mg create <name> <type> <icon> <display name>"
+  mginvalidicon: "§cInvalid item icon: {icon}"
+  mgcreated: "§aArena created: {name}"
+  mgcreatexists: "§cAn arena with that name already exists."
+
+  mgspawn: "§cUsage: /mg setspawn <arena>"
+  mgspawnset: "§aSpawn point set successfully."
+
+  mglobby: "§cUsage: /mg setlobby <arena>"
+  mglobbyset: "§aLobby set successfully."
+
+  mgplayzone: "§cUsage: /mg setplayzone <arena>"
+  mgselectpositions: "§cSelect both positions first using the Blaze Rod."
+  mgplayzoneset: "§aPlayable area set successfully."
+
+  mgdelete: "§cUsage: /mg delete <name>"
+  mgdeleted: "§aArena deleted: {name}"
+
+  mglistempty: "§cNo arenas registered."
+  mglistheader: "§6Registered Arenas:"
+  mglistitem: "§e- {name} §7({type})"
+
+  gui.title: "§eSelect an Arena"
+
+  join-gui-title: "§bJoin an Arena"
+  join-gui-item-name: "§a{display} §7({name})"
+  leave-item-name: "§cLeave Arena"
+
+  alreadyin: "§cYou are already in an arena."
+  leaveitemname: "§cLeave Arena"
+  leftarena: "§aYou have left the arena."
+  notinarena: "§cYou are not in any arena."
+
+  mgarenanotfound: "§cArena not found!"
+  mgjoined: "§aYou joined arena §e{name}§a!"
+
+  mgleft: "§aYou left the arena."
+
+  mgreloaded: "§aMinigamesCore reloaded successfully."
+
+  pos1: "§aPosition 1 selected at: §7{location}"
+  pos2: "§aPosition 2 selected at: §7{location}"
+
+  arena.disconnect: "§cYou have been removed from the arena for disconnecting."
+  force-reload: "§cYou were kicked due to a forced reload."
+  forcedr: "§aAll arenas and players have been reset successfully."
+
+  tntrun.gamewinstate: "§4Game Over!"
+  tntrun.waiting: "§eWaiting for players... (§f{count}§e/2)"
+  tntrun.countdown: "§eStarting in §f{count} §eseconds..."
+  tntrun.running: "§aRun! The floor is disappearing"
+  tntrun.pw.getSC: "§aYou picked up a second chance!"
+  tntrun.pw.hasSC: "§cYou already have a stored second chance."
+  tntrun.pw.usedSC: "§aYou used your second chance!"
+
+  tnttag.gamewinstate: "§4Game Over! §fWinner:§e{player}"
+  tnttag.waiting: "§eWaiting for players... (§f{count}§e/2)"
+  tnttag.countdown: "§eStarting in §c{count}s"
+  tnttag.running: "§cTNT Tag in progress! §7Players: {count}"
+  tnttag.it: "§c{time}s to pass the TNT!"
+  tnttag.started: "§eWatch out! §c{it} §ahas the bomb!"
+
+  sumo.waiting: "§eWaiting for players... (§a{count}§e/2)"
+  sumo.countdown: "§aStarting in {count} seconds!"
+  sumo.running: "§aPush your opponents out!"
+  sumo.eliminated: "§c{player} was eliminated!"
+  sumo.gamewinstate: "§6{player} has won the Sumo!"
+
+  spleef.waiting: "§bSpleef §7| Waiting for players... §f(§e{count}§f)"
+  spleef.countdown: "§bSpleef §7| §aStarting in §e{count} §aseconds..."
+  spleef.running: "§bSpleef §7| §aPlayers in game: §e{count}"
+  spleef.gamewinstate: "§bSpleef §7| §aWinner: §e%player%"
+  spleef.eliminated: "§cYou have been eliminated from Spleef"
+  spleef.joined: "§aYou joined the Spleef arena"
+  spleef.left: "§eYou left the Spleef arena"
+
+  paintball.waiting: "§eWaiting for players... ({count}/2)"
+  paintball.countdown: "§aThe game starts in §f{count} §aseconds..."
+  paintball.running: "§aPaintball in progress. Players alive: {count}"
+  paintball.win: "§a{player} has won Paintball!"
+
+  oitc.waiting: "§eOITC §7| Waiting for players... §f(§e{count}§f/2)"
+  oitc.countdown: "§eOITC §7| §aStarting in §e{count} §aseconds..."
+  oitc.instructions: "§eOITC §7| §fUse your bow (1 arrow) to kill in one shot. §eEach kill gives you one extra arrow. §cYou lose when you run out of lives!"
+  oitc.running: "§eOITC §7| §aPlayers in game: §e{count}"
+  oitc.kill: "§e{killer} §7killed §c{victim} §7(§e{victim_lives} lives left§7)"
+  oitc.eliminated: "§cYou have been eliminated from OITC"
+  oitc.eliminated-broadcast: "§e{player} §cwas eliminated from the game"
+  oitc.gamewinstate: "§eOITC §7| §aWinner: §e{player}"
+  oitc.joined: "§aYou joined the OITC arena"
+  oitc.left: "§eYou left the OITC arena"
+
+  buildbattle:
+    cannot-join: "§cYou cannot join this arena right now."
+    waiting: "§aWaiting for players... §e{count} §aplayers"
+    countdown: "§eGame starts in §c{time} §eseconds"
+    building-time: "§aRemaining build time: §e{time}s"
+    theme-selected: "§aThe theme is: §e{theme}!"
+    theme-bar: "§eTheme: §b{theme}"
+    voting-next: "§bMoving to the next player for voting..."
+    vote-cast: "§aYou voted with §e{score} §apoints."
+    vote-already-cast: "§cYou already voted for this build."
+    vote-own-build: "§cYou cannot vote for your own build."
+    start-voting: "§eTime's up! Starting voting..."
+    winner-announce: "§6The winner is §e{player} §6with §b{score} §6points!"
+    game-ended: "§aThe game has ended!"
+    ending: "§aArena resetting in §e{time}s"
+
+# Portugués
+
+pt:
+  ingameonly: "§4Este comando só pode ser usado dentro do jogo."
+
+  help:
+    - "§6MinigamesCore - Comandos Disponíveis:"
+    - "§e/mg create <name> <type> <icon> <display name> §7- Criar uma nova arena"
+    - "§e/mg setlobby <name> §7- Definir o lobby da arena"
+    - "§e/mg setspawn <name> §7- Definir o ponto de spawn da arena"
+    - "§e/mg setplayzone <name> §7- Definir a área jogável"
+    - "§e/mg delete <name> §7- Excluir uma arena"
+    - "§e/mg list §7- Listar todas as arenas"
+    - "§e/mg join <arena> §7- Entrar em uma arena"
+    - "§e/mg leave §7- Sair da arena atual"
+    - "§e/mg reload §7- Recarregar arenas e configurações"
+
+  mgcreate: "§cUso: /mg create <name> <type> <icon> <display name>"
+  mginvalidicon: "§cÍcone de item inválido: {icon}"
+  mgcreated: "§aArena criada: {name}"
+  mgcreatexists: "§cJá existe uma arena com esse nome."
+
+  mgspawn: "§cUso: /mg setspawn <arena>"
+  mgspawnset: "§aPonto de spawn definido com sucesso."
+
+  mglobby: "§cUso: /mg setlobby <arena>"
+  mglobbyset: "§aLobby definido com sucesso."
+
+  mgplayzone: "§cUso: /mg setplayzone <arena>"
+  mgselectpositions: "§cSelecione as duas posições primeiro usando a Vara de Blaze."
+  mgplayzoneset: "§aÁrea jogável definida com sucesso."
+
+  mgdelete: "§cUso: /mg delete <name>"
+  mgdeleted: "§aArena excluída: {name}"
+
+  mglistempty: "§cNenhuma arena registrada."
+  mglistheader: "§6Arenas Registradas:"
+  mglistitem: "§e- {name} §7({type})"
+
+  gui.title: "§eSelecione uma Arena"
+
+  join-gui-title: "§bEntrar em uma Arena"
+  join-gui-item-name: "§a{display} §7({name})"
+  leave-item-name: "§cSair da Arena"
+
+  alreadyin: "§cVocê já está em uma arena."
+  leaveitemname: "§cSair da Arena"
+  leftarena: "§aVocê saiu da arena."
+  notinarena: "§cVocê não está em nenhuma arena."
+
+  mgarenanotfound: "§cArena não encontrada!"
+  mgjoined: "§aVocê entrou na arena §e{name}§a!"
+
+  mgleft: "§aVocê saiu da arena."
+
+  mgreloaded: "§aMinigamesCore recarregado com sucesso."
+
+  pos1: "§aPosição 1 selecionada em: §7{location}"
+  pos2: "§aPosição 2 selecionada em: §7{location}"
+
+  arena.disconnect: "§cVocê foi removido da arena por desconectar."
+  force-reload: "§cVocê foi expulso devido a um recarregamento forçado."
+  forcedr: "§aTodas as arenas e jogadores foram resetados com sucesso."
+
+  tntrun.gamewinstate: "§4Fim de jogo!"
+  tntrun.waiting: "§eAguardando jogadores... (§f{count}§e/2)"
+  tntrun.countdown: "§eComeçando em §f{count} §esegundos..."
+  tntrun.running: "§aCorra! O chão está desaparecendo"
+  tntrun.pw.getSC: "§aVocê pegou uma segunda chance!"
+  tntrun.pw.hasSC: "§cVocê já tem uma segunda chance armazenada."
+  tntrun.pw.usedSC: "§aVocê usou sua segunda chance!"
+
+  tnttag.gamewinstate: "§4Fim de jogo! §fVencedor:§e{player}"
+  tnttag.waiting: "§eAguardando jogadores... (§f{count}§e/2)"
+  tnttag.countdown: "§eComeçando em §c{count}s"
+  tnttag.running: "§cTNT Tag em andamento! §7Jogadores: {count}"
+  tnttag.it: "§c{time}s para passar o TNT!"
+  tnttag.started: "§eCuidado! §c{it} §aestá com a bomba!"
+
+  sumo.waiting: "§eAguardando jogadores... (§a{count}§e/2)"
+  sumo.countdown: "§aComeçando em {count} segundos!"
+  sumo.running: "§aEmpurre seus oponentes para fora!"
+  sumo.eliminated: "§c{player} foi eliminado!"
+  sumo.gamewinstate: "§6{player} venceu o Sumo!"
+
+  spleef.waiting: "§bSpleef §7| Aguardando jogadores... §f(§e{count}§f)"
+  spleef.countdown: "§bSpleef §7| §aComeçando em §e{count} §asegundos..."
+  spleef.running: "§bSpleef §7| §aJogadores na partida: §e{count}"
+  spleef.gamewinstate: "§bSpleef §7| §aVencedor: §e%player%"
+  spleef.eliminated: "§cVocê foi eliminado do Spleef"
+  spleef.joined: "§aVocê entrou na arena Spleef"
+  spleef.left: "§eVocê saiu da arena Spleef"
+
+  paintball.waiting: "§eAguardando jogadores... ({count}/2)"
+  paintball.countdown: "§aO jogo começa em §f{count} §asegundos..."
+  paintball.running: "§aPaintball em andamento. Jogadores vivos: {count}"
+  paintball.win: "§a{player} venceu o Paintball!"
+
+  oitc.waiting: "§eOITC §7| Aguardando jogadores... §f(§e{count}§f/2)"
+  oitc.countdown: "§eOITC §7| §aComeçando em §e{count} §asegundos..."
+  oitc.instructions: "§eOITC §7| §fUse seu arco (1 flecha) para matar com um tiro. §eCada abate dá uma flecha extra. §cVocê perde quando ficar sem vidas!"
+  oitc.running: "§eOITC §7| §aJogadores na partida: §e{count}"
+  oitc.kill: "§e{killer} §7matou §c{victim} §7(§e{victim_lives} vidas restantes§7)"
+  oitc.eliminated: "§cVocê foi eliminado do OITC"
+  oitc.eliminated-broadcast: "§e{player} §cfoi eliminado do jogo"
+  oitc.gamewinstate: "§eOITC §7| §aVencedor: §e{player}"
+  oitc.joined: "§aVocê entrou na arena OITC"
+  oitc.left: "§eVocê saiu da arena OITC"
+
+  buildbattle:
+    cannot-join: "§cVocê não pode entrar nesta arena agora."
+    waiting: "§aAguardando jogadores... §e{count} §ajogadores"
+    countdown: "§eO jogo começa em §c{time} §esegundos"
+    building-time: "§aTempo restante para construir: §e{time}s"
+    theme-selected: "§aO tema é: §e{theme}!"
+    theme-bar: "§eTema: §b{theme}"
+    voting-next: "§bIndo para o próximo jogador para votação..."
+    vote-cast: "§aVocê votou com §e{score} §apontos."
+    vote-already-cast: "§cVocê já votou nesta construção."
+    vote-own-build: "§cVocê não pode votar na sua própria construção."
+    start-voting: "§eO tempo acabou! Iniciando votação..."
+    winner-announce: "§6O vencedor é §e{player} §6com §b{score} §6pontos!"
+    game-ended: "§aO jogo terminou!"
+    ending: "§aA arena será reiniciada em §e{time}s"
+
+
+# Francés
+
+fr:
+  ingameonly: "§4Cette commande ne peut être utilisée que dans le jeu."
+
+  help:
+    - "§6MinigamesCore - Commandes disponibles :"
+    - "§e/mg create <name> <type> <icon> <display name> §7- Créer une nouvelle arène"
+    - "§e/mg setlobby <name> §7- Définir le lobby de l'arène"
+    - "§e/mg setspawn <name> §7- Définir le point d'apparition de l'arène"
+    - "§e/mg setplayzone <name> §7- Définir la zone de jeu"
+    - "§e/mg delete <name> §7- Supprimer une arène"
+    - "§e/mg list §7- Lister toutes les arènes"
+    - "§e/mg join <arena> §7- Rejoindre une arène"
+    - "§e/mg leave §7- Quitter l'arène actuelle"
+    - "§e/mg reload §7- Recharger les arènes et la configuration"
+
+  mgcreate: "§cUsage : /mg create <name> <type> <icon> <display name>"
+  mginvalidicon: "§cIcône d'objet invalide : {icon}"
+  mgcreated: "§aArène créée : {name}"
+  mgcreatexists: "§cUne arène portant ce nom existe déjà."
+
+  mgspawn: "§cUsage : /mg setspawn <arena>"
+  mgspawnset: "§aPoint d'apparition défini avec succès."
+
+  mglobby: "§cUsage : /mg setlobby <arena>"
+  mglobbyset: "§aLobby défini avec succès."
+
+  mgplayzone: "§cUsage : /mg setplayzone <arena>"
+  mgselectpositions: "§cSélectionnez d'abord deux positions à l'aide de la canne Blaze."
+  mgplayzoneset: "§aZone de jeu définie avec succès."
+
+  mgdelete: "§cUsage : /mg delete <name>"
+  mgdeleted: "§aArène supprimée : {name}"
+
+  mglistempty: "§cAucune arène enregistrée."
+  mglistheader: "§6Arènes enregistrées :"
+  mglistitem: "§e- {name} §7({type})"
+
+  gui.title: "§eSélectionnez une arène"
+
+  join-gui-title: "§bRejoindre une arène"
+  join-gui-item-name: "§a{display} §7({name})"
+  leave-item-name: "§cQuitter l'arène"
+
+  alreadyin: "§cVous êtes déjà dans une arène."
+  leaveitemname: "§cQuitter l'arène"
+  leftarena: "§aVous avez quitté l'arène."
+  notinarena: "§cVous n'êtes dans aucune arène."
+
+  mgarenanotfound: "§cArène introuvable !"
+  mgjoined: "§aVous avez rejoint l'arène §e{name}§a !"
+
+  mgleft: "§aVous avez quitté l'arène."
+
+  mgreloaded: "§aMinigamesCore rechargé avec succès."
+
+  pos1: "§aPosition 1 sélectionnée : §7{location}"
+  pos2: "§aPosition 2 sélectionnée : §7{location}"
+
+  arena.disconnect: "§cVous avez été retiré de l'arène pour cause de déconnexion."
+  force-reload: "§cVous avez été expulsé en raison d'un rechargement forcé."
+  forcedr: "§aToutes les arènes et joueurs ont été réinitialisés avec succès."
+
+  tntrun.gamewinstate: "§4Fin de la partie !"
+  tntrun.waiting: "§eEn attente de joueurs... (§f{count}§e/2)"
+  tntrun.countdown: "§eDémarrage dans §f{count} §esecondes..."
+  tntrun.running: "§aCourez ! Le sol disparaît."
+  tntrun.pw.getSC: "§aVous avez obtenu une seconde chance !"
+  tntrun.pw.hasSC: "§cVous avez déjà une seconde chance en réserve."
+  tntrun.pw.usedSC: "§aVous avez utilisé votre seconde chance !"
+
+  tnttag.gamewinstate: "§4Fin de la partie ! §fVainqueur : §e{player}"
+  tnttag.waiting: "§eEn attente de joueurs... (§f{count}§e/2)"
+  tnttag.countdown: "§eDémarrage dans §c{count}s"
+  tnttag.running: "§cTNT Tag en cours ! §7Joueurs : {count}"
+  tnttag.it: "§c{time}s pour passer la TNT !"
+  tnttag.started: "§eAttention ! §c{it} §aest porteur de la bombe !"
+
+  sumo.waiting: "§eEn attente de joueurs... (§a{count}§e/2)"
+  sumo.countdown: "§aDémarrage dans {count} secondes !"
+  sumo.running: "§aPoussez vos adversaires hors de la zone !"
+  sumo.eliminated: "§c{player} a été éliminé !"
+  sumo.gamewinstate: "§6{player} a gagné le Sumo !"
+
+  spleef.waiting: "§bSpleef §7| En attente de joueurs... §f(§e{count}§f)"
+  spleef.countdown: "§bSpleef §7| §aDémarrage dans §e{count} §asecondes..."
+  spleef.running: "§bSpleef §7| §aJoueurs dans la partie : §e{count}"
+  spleef.gamewinstate: "§bSpleef §7| §aVainqueur : §e%player%"
+  spleef.eliminated: "§cVous avez été éliminé du Spleef"
+  spleef.joined: "§aVous avez rejoint l'arène Spleef"
+  spleef.left: "§eVous avez quitté l'arène Spleef"
+
+  paintball.waiting: "§eEn attente de joueurs... ({count}/2)"
+  paintball.countdown: "§aLa partie commence dans §f{count} §asecondes..."
+  paintball.running: "§aPaintball en cours. Joueurs restants : {count}"
+  paintball.win: "§a{player} a gagné le Paintball !"
+
+  oitc.waiting: "§eOITC §7| En attente de joueurs... §f(§e{count}§f/2)"
+  oitc.countdown: "§eOITC §7| §aDémarrage dans §e{count} §asecondes..."
+  oitc.instructions: "§eOITC §7| §fUtilisez votre arc (1 flèche) pour tuer en un coup. §eChaque élimination vous donne une flèche supplémentaire. §cVous perdez quand vous n'avez plus de vies !"
+  oitc.running: "§eOITC §7| §aJoueurs dans la partie : §e{count}"
+  oitc.kill: "§e{killer} §7a tué §c{victim} §7(§e{victim_lives} vies restantes§7)"
+  oitc.eliminated: "§cVous avez été éliminé de l'OITC"
+  oitc.eliminated-broadcast: "§e{player} §ca été éliminé de la partie"
+  oitc.gamewinstate: "§eOITC §7| §aVainqueur : §e{player}"
+  oitc.joined: "§aVous avez rejoint l'arène OITC"
+  oitc.left: "§eVous avez quitté l'arène OITC"
+
+  buildbattle:
+    cannot-join: "§cVous ne pouvez pas rejoindre cette arène pour le moment."
+    waiting: "§aEn attente de joueurs... §e{count} §ajoueurs"
+    countdown: "§eLa partie commence dans §c{time} §esecondes"
+    building-time: "§aTemps restant pour construire : §e{time}s"
+    theme-selected: "§aLe thème est : §e{theme} !"
+    theme-bar: "§eThème : §b{theme}"
+    voting-next: "§bPassage au joueur suivant pour voter..."
+    vote-cast: "§aVous avez voté avec §e{score} §apoints."
+    vote-already-cast: "§cVous avez déjà voté pour cette construction."
+    vote-own-build: "§cVous ne pouvez pas voter pour votre propre construction."
+    start-voting: "§eLe temps est écoulé ! Début du vote..."
+    winner-announce: "§6Le vainqueur est §e{player} §6avec §b{score} §6points !"
+    game-ended: "§aLa partie est terminée !"
+    ending: "§aL'arène sera réinitialisée dans §e{time}s"

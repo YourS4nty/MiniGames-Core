@@ -1,0 +1,87 @@
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃              MinigamesCore Config           ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+# 🌍 Plugin language (affects the messages shown to players)
+# Available options: es (Spanish), en (English), pt (Portuguese), fr (French if added)
+language: en
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                  ⚡ TNT Run Settings         ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+tntrun:
+  # 🧱 List of blocks that will break when a player walks over them.
+  # ❗ Tip: Use solid blocks that won’t fall by themselves (no sand, no gravel).
+  # Valid examples: WOOL, CONCRETE, TERRACOTTA, GLASS, DIAMOND_BLOCK...
+  breakable-blocks:
+    - RED_WOOL
+    - BLUE_WOOL
+
+  # 🎁 Probability for each power-up to appear (total must be 100).
+  # SPEED → Increases movement speed
+  # JUMP → Higher jump boost
+  # SECOND_CHANCE → Revive once
+  powerup-chances:
+    SPEED: 55
+    JUMP: 43
+    SECOND_CHANCE: 2
+
+  # ⏲ Power-up spawn settings
+  powerup-spawn-interval: 40   # Interval in ticks (20 ticks = 1 second) → 40 ticks = 2 seconds
+  powerup-spawn-chance: 50     # Percentage chance for a power-up to actually spawn each interval
+
+# 🌎 Worlds where if a player disconnects, they will be removed from the arena
+arena-disconnect-worlds:
+  - "MinigamesWorld"
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                 🎨 Color Floor               ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+colorfloor:
+  # Time players have to stand on the correct color before wrong blocks disappear
+  first-round-time: 6  # Time for the first round
+  min-round-time: 2    # Minimum time allowed per round
+  max-round-time: 5    # Maximum time allowed per round
+
+  # List of valid block colors (use Minecraft material names)
+  colors:
+    - RED_CONCRETE
+    - BLUE_CONCRETE
+    - YELLOW_CONCRETE
+    - LIME_CONCRETE
+    - ORANGE_CONCRETE
+    - PURPLE_CONCRETE
+    - CYAN_CONCRETE
+    - PINK_CONCRETE
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                 💪 Juggernaut                ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+juggernaut:
+  health: 40.0            # Juggernaut's health (20.0 = 10 normal hearts)
+  weapon: DIAMOND_SWORD   # Weapon given to the Juggernaut
+  armor:                  # Juggernaut's armor set
+    helmet: DIAMOND_HELMET
+    chestplate: DIAMOND_CHESTPLATE
+    leggings: DIAMOND_LEGGINGS
+    boots: DIAMOND_BOOTS
+  countdown: 10           # Countdown before the match starts (in seconds)
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃               🏗 Build Battle                ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+buildbattle:
+  build-time: 10        # Build time (in seconds)
+  vote-time: 10         # Time for each voting phase (in seconds)
+  plot-size: 25         # Size of each player's plot
+
+  # List of possible build themes (you can add or remove)
+  themes:
+    - Modern house
+    - Dragon
+    - Medieval castle
+    - Pirate ship
+    - Japanese garden
+    - Robot
+    - Tropical beach
+    - Outer space
